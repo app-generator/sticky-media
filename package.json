@@ -1,0 +1,27 @@
+{
+    "name": "sticky-media",
+    "version": "0.0.1",
+    "description": "Node JS interface to AppSeed Tooling",
+    "main": "./dist/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "node",
+        "sticky",
+        "media",
+        "package",
+        "appseed",
+        "cli"
+    ],
+    "author": "Appseed.us",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/app-generator/sticky-media.git"
+    },
+    "bugs": {
+        "url": "https://github.com/app-generator/sticky-media/issues"
+    },
+    "homepage": "https://appseed.us"
+}
