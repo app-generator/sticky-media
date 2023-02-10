@@ -1,7 +1,7 @@
 # Change Log
 
 ## [0.0.2] 2023-02-10
-### Initial Release
+### Changes
 
 - Minor Codebase Changes
 
