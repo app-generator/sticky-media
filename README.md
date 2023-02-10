@@ -1,8 +1,8 @@
 # Sticky Media 
 
-Simple VanillaJS library for sticky media content (YoutUbe videos). 
+Simple Vanilla JS library for Sticky Media content (Youtube videos).
 
-- NPM Page: [AppSeed Shell](https://www.npmjs.com/package/sticky-media)
+- NPM Page: [Sticky Media](https://www.npmjs.com/package/sticky-media)
 - **Support**: 24/7 LIVE Support via [Discord] (registered users)
 
 ## Table of contents
