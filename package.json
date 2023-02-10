@@ -1,7 +1,7 @@
 {
     "name": "sticky-media",
     "version": "0.0.1",
-    "description": "Node JS interface to AppSeed Tooling",
+    "description": "Simple Vanilla JS library for Sticky Media content",
     "main": "./dist/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
