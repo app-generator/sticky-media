@@ -1,5 +1,5 @@
 function hello() {
-	console.log('AppSeed JS CLI');
+	console.log('Sticky Media');
 }
 
 module.exports = {
