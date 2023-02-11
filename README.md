@@ -1,4 +1,4 @@
-# Sticky Media 
+# Sticky Media
 
 Simple Vanilla JS library for Sticky Media content (Youtube videos).
 
@@ -7,17 +7,18 @@ Simple Vanilla JS library for Sticky Media content (Youtube videos).
 
 ## Table of contents
 
- * [Technologies](#technologies)
- * [Setup](#setup)
- * [Quick use](#quick-use)
- * [License](#license)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Quick use](#quick-use)
+- [License](#license)
 
 <br />
 
 ## Technologies
 
 Project create with:
- * Node JS >= 14x
+
+- Node JS >= 14x
 
 <br />
 
@@ -38,9 +39,10 @@ Simply and functional example/s of use.
 Example:
 
 ```javascript
-var test = require('sticky-media');
+<a href="#" title="Video 1" class="show-sticky-video-modal" data-video-id="v0Cf6nM77bU">Video 1</a>
+<a href="#" title="Video 2" class="show-sticky-video-modal" data-video-id="Q8L3ElJlpjk">Video 2</a>
 
-test.hello();
+<script src="src/index.js"></script>
 ```
 
 <br />
@@ -52,4 +54,5 @@ test.hello();
 <br />
 
 ---
+
 Sticky Media (JS Interface) - Provided by [AppSeed](https://appseed.us)

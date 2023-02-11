@@ -83,7 +83,10 @@ function closeStickyVideoModal() {
 }
 
 // Button click event
-function stickyVideo(e) {
+var elements = document.getElementsByClassName("show-sticky-video-modal");
+
+var myFunction = function () {
+  var e = this;
   event.preventDefault();
   localStorage.setItem("videoModalFlag", "true");
   if (localStorage.getItem("videoID") != e.getAttribute("data-video-id")) {
@@ -99,6 +102,10 @@ function stickyVideo(e) {
   myVideoTimer = setInterval(function () {
     localStorage.setItem("videoModalTime", player.getCurrentTime());
   }, 1000);
+};
+
+for (var i = 0; i < elements.length; i++) {
+  elements[i].addEventListener("click", myFunction, false);
 }
 
 // Inject YouTube API script
