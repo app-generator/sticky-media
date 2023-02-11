@@ -1,8 +1,8 @@
-// Add HTML in Body
+// Add HTML in Body // @TODO: HTML code should be moved to `src/html/sticky-popup.html`
 document.body.innerHTML +=
   '<div class="sticky-video-modal"> <div class="sticky-video-modal-header"> <a href="#" class="sticky-video-modal-resize sticky-video-modal-btn" onclick="toggleView()" > <img src="src/img/ic-maximize.svg" alt="maximize" class="maximize-icon"/> <img src="src/img/ic-minimize.svg" alt="minimize" class="minimize-icon"/> </a> <a href="#" class="sticky-video-modal-close sticky-video-modal-btn" onclick="closeStickyVideoModal()" > <img src="src/img/ic-close.svg" alt="close"/> </a> </div><div class="sticky-video-modal-body"> <div id="sticky-video-modal-video"></div></div></div>';
 
-// Style Required for Modal
+// Style Required for Modal // @TODO: CSS code should be moved to `src/css/style.css`
 var styles = `.sticky-video-modal{position:fixed;background:#000;z-index:9999;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:.5s}.fullscreen-mode .sticky-video-modal{width:100%;height:100%;right:0;bottom:0}.smallscreen-mode .sticky-video-modal{width:350px;height:250px;right:20px;bottom:20px;box-shadow:0 0 20px rgb(0 0 0 / 80%)}.show-sticky-video-modal .sticky-video-modal{opacity:1;visibility:visible}.show-sticky-video-modal:not(.smallscreen-mode){overflow:hidden}.sticky-video-modal-header{display:flex;align-items:center;justify-content:flex-end;padding:10px}.sticky-video-modal-btn{display:block;padding:8px;margin-left:10px;opacity:.5}.sticky-video-modal-btn:hover{opacity:.8}.sticky-video-modal-btn img{display:block;width:16px;height:16px}body.smallscreen-mode .sticky-video-modal-btn img.minimize-icon,body:not(.smallscreen-mode) .sticky-video-modal-btn img.maximize-icon{display:none}.sticky-video-modal-body{flex-grow:1;position:relative}#sticky-video-modal-video{position:absolute;display:block;padding:0;margin:0;width:100%;height:100%}`;
 var styleSheet = document.createElement("style");
 styleSheet.innerText = styles;
