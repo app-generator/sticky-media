@@ -6,5 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sticky Media</title>
   </head>
-  <body></body>
+  <body>
+
+    <a class="sticky-popup" target="_blank" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y">Video_1</a>
+    <a class="sticky-popup" target="_blank" href="https://www.youtube.com/embed/wWY_clozJlU">Video_2</a>
+    <a class="" target="_blank" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y">Video_3</a>
+
+    <script src="dist/index.js"></script>
+
+    <script>
+      // Default -> "sticky-popup" CSS class is used
+      var strickyMediaInstance = new StrickyMedia() 
+      
+      // Custom -> "my-sticky-class" is used to trigger the popup
+      // var strickyMediaInstance = new StrickyMedia( {'css-class':'my-sticky-class'} ); 
+      </script>
+  </body>
 </html>
