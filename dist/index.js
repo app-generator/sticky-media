@@ -1,12 +1,6 @@
-// Add HTML in Body
+// Add HTML in Body // @TODO: HTML code should be moved to `src/html/sticky-popup.html`
 document.body.innerHTML +=
-  '<div class="sticky-video-modal"> <div class="sticky-video-modal-header"> <a href="#" class="sticky-video-modal-resize sticky-video-modal-btn" onclick="toggleView()" > <img src="src/img/ic-maximize.svg" alt="maximize" class="maximize-icon"/> <img src="src/img/ic-minimize.svg" alt="minimize" class="minimize-icon"/> </a> <a href="#" class="sticky-video-modal-close sticky-video-modal-btn" onclick="closeStickyVideoModal()" > <img src="src/img/ic-close.svg" alt="close"/> </a> </div><div class="sticky-video-modal-body"> <div id="sticky-video-modal-video"></div></div></div>';
-
-// Style Required for Modal
-var styles = `.sticky-video-modal{position:fixed;background:#000;z-index:9999;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:.5s}.fullscreen-mode .sticky-video-modal{width:100%;height:100%;right:0;bottom:0}.smallscreen-mode .sticky-video-modal{width:350px;height:250px;right:20px;bottom:20px;box-shadow:0 0 20px rgb(0 0 0 / 80%)}.show-sticky-video-modal .sticky-video-modal{opacity:1;visibility:visible}.show-sticky-video-modal:not(.smallscreen-mode){overflow:hidden}.sticky-video-modal-header{display:flex;align-items:center;justify-content:flex-end;padding:10px}.sticky-video-modal-btn{display:block;padding:8px;margin-left:10px;opacity:.5}.sticky-video-modal-btn:hover{opacity:.8}.sticky-video-modal-btn img{display:block;width:16px;height:16px}body.smallscreen-mode .sticky-video-modal-btn img.minimize-icon,body:not(.smallscreen-mode) .sticky-video-modal-btn img.maximize-icon{display:none}.sticky-video-modal-body{flex-grow:1;position:relative}#sticky-video-modal-video{position:absolute;display:block;padding:0;margin:0;width:100%;height:100%}`;
-var styleSheet = document.createElement("style");
-styleSheet.innerText = styles;
-document.getElementsByTagName("head")[0].appendChild(styleSheet);
+  '<div class="sticky-video-modal"> <div class="sticky-video-modal-header"> <a href="#" class="sticky-video-modal-resize sticky-video-modal-btn" onclick="toggleView()" > <img src="../img/ic-maximize.svg" alt="maximize" class="maximize-icon"/> <img src="../img/ic-minimize.svg" alt="minimize" class="minimize-icon"/> </a> <a href="#" class="sticky-video-modal-close sticky-video-modal-btn" onclick="closeStickyVideoModal()" > <img src="../img/ic-close.svg" alt="close"/> </a> </div><div class="sticky-video-modal-body"> <div id="sticky-video-modal-video"></div></div></div>';
 
 // Add Default Values for video
 if (!localStorage.getItem("videoModalView"))
@@ -83,29 +77,43 @@ function closeStickyVideoModal() {
 }
 
 // Button click event
-var elements = document.getElementsByClassName("show-sticky-video-modal");
+// constructor function
+function StrickyMedia(e) {
+  var cssClass = "sticky-popup";
+  if (e != undefined) cssClass = e.cssClass;
+  var elements = document.getElementsByClassName(cssClass);
 
-var myFunction = function () {
-  var e = this;
-  event.preventDefault();
-  localStorage.setItem("videoModalFlag", "true");
-  if (localStorage.getItem("videoID") != e.getAttribute("data-video-id")) {
-    localStorage.setItem("videoID", e.getAttribute("data-video-id"));
-    player.loadVideoById({
-      videoId: localStorage.getItem("videoID"),
-    });
-    localStorage.setItem("videoModalTime", 0);
+  var myFunction = function () {
+    var e = this;
+    event.preventDefault();
+    localStorage.setItem("videoModalFlag", "true");
+    if (localStorage.getItem("videoID") != e.getAttribute("data-video-id")) {
+      localStorage.setItem("videoID", e.getAttribute("data-video-id"));
+      player.loadVideoById({
+        videoId: localStorage.getItem("videoID"),
+      });
+      localStorage.setItem("videoModalTime", 0);
+    }
+    document.body.classList.add("show-sticky-video-modal");
+    player.playVideo();
+    clearInterval(myVideoTimer);
+    myVideoTimer = setInterval(function () {
+      localStorage.setItem("videoModalTime", player.getCurrentTime());
+    }, 1000);
+  };
+
+  for (var i = 0; i < elements.length; i++) {
+    var VideoId = elements[i].getAttribute("href");
+    var dataVideoId;
+    if (VideoId.indexOf("embed") > -1) {
+      dataVideoId = VideoId.split("embed/")[1];
+    } else if (VideoId.indexOf("watch?v=") > -1) {
+      dataVideoId = VideoId.split("watch?v=")[1];
+    }
+
+    elements[i].setAttribute("data-video-id", dataVideoId);
+    elements[i].addEventListener("click", myFunction, false);
   }
-  document.body.classList.add("show-sticky-video-modal");
-  player.playVideo();
-  clearInterval(myVideoTimer);
-  myVideoTimer = setInterval(function () {
-    localStorage.setItem("videoModalTime", player.getCurrentTime());
-  }, 1000);
-};
-
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener("click", myFunction, false);
 }
 
 // Inject YouTube API script

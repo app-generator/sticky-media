@@ -1,1 +1,44 @@
-<!-- THIS is for HTML code -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Media</title>
+    <link rel="stylesheet" href="../../dist/css/style.css" />
+  </head>
+  <body>
+    <a
+      class="sticky-popup"
+      target="_blank"
+      href="https://www.youtube.com/watch?v=G1OM2L7XK5Y"
+      >Video_1</a
+    >
+    <a
+      class="my-sticky-class"
+      target="_blank"
+      href="https://www.youtube.com/embed/wWY_clozJlU"
+      >Video_2</a
+    >
+    <a
+      class=""
+      target="_blank"
+      href="https://www.youtube.com/watch?v=G1OM2L7XK5Y"
+      >Video_3</a
+    >
+
+    <!-- Sticky Media -->
+    <!-- The demo should use the compiled, compressed version -->
+    <script src="../../dist/index-min.js"></script>
+
+    <script>
+      // Default -> "sticky-popup" CSS class is used
+      var strickyMediaInstance = new StrickyMedia();
+
+      // // Custom -> "my-sticky-class" is used to trigger the popup
+      var strickyMediaInstance = new StrickyMedia({
+        "cssClass": "my-sticky-class",
+      });
+    </script>
+  </body>
+</html>
