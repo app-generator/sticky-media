@@ -7,19 +7,27 @@
     <title>Sticky Media</title>
   </head>
   <body>
+    <a class="sticky-popup" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y"
+      >Video_1</a
+    >
+    <a class="my-sticky-class" href="https://www.youtube.com/embed/wWY_clozJlU"
+      >Video_2</a
+    >
+    <a
+      class=""
+      target="_blank"
+      href="https://www.youtube.com/watch?v=G1OM2L7XK5Y"
+      >Video_3</a
+    >
 
-    <a class="sticky-popup" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y">Video_1</a>
-    <a class="sticky-popup" href="https://www.youtube.com/embed/wWY_clozJlU">Video_2</a>
-    <a class="" target="_blank" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y">Video_3</a>
-
-    <script src="src/index.js"></script>
+    <script src="dist/index.js"></script>
 
     <script>
       // Default -> "sticky-popup" CSS class is used
-      var strickyMediaInstance = new StrickyMedia() 
-      
+      var strickyMediaInstance = new StrickyMedia();
+
       // Custom -> "my-sticky-class" is used to trigger the popup
-      // var strickyMediaInstance = new StrickyMedia( {'css-class':'my-sticky-class'} ); 
-      </script>
+      var strickyMediaInstance = new StrickyMedia( {'cssClass':'my-sticky-class'} );
+    </script>
   </body>
 </html>

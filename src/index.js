@@ -1,6 +1,24 @@
-// Add HTML in Body // @TODO: HTML code should be moved to `src/html/sticky-popup.html`
+// global variable for the player
+var player;
+var myVideoTimer;
+
+// Add css to main page
+var head = document.getElementsByTagName("HEAD")[0];
+var link = document.createElement("link");
+link.rel = "stylesheet";
+link.type = "text/css";
+link.href = "src/css/style.css";
+head.appendChild(link);
+
+// // Add HTML in Body // @TODO: HTML code should be moved to
+// const xhttpHTML = new XMLHttpRequest();
+// xhttpHTML.onload = function () {
+//   document.body.innerHTML += this.responseText;
+// };
+// xhttpHTML.open("GET", "src/html/sticky-popup.html");
+// xhttpHTML.send();
 document.body.innerHTML +=
-  '<div class="sticky-video-modal"> <div class="sticky-video-modal-header"> <a href="#" class="sticky-video-modal-resize sticky-video-modal-btn" onclick="toggleView()" > <img src="../img/ic-maximize.svg" alt="maximize" class="maximize-icon"/> <img src="../img/ic-minimize.svg" alt="minimize" class="minimize-icon"/> </a> <a href="#" class="sticky-video-modal-close sticky-video-modal-btn" onclick="closeStickyVideoModal()" > <img src="../img/ic-close.svg" alt="close"/> </a> </div><div class="sticky-video-modal-body"> <div id="sticky-video-modal-video"></div></div></div>';
+  '<div class="sticky-video-modal"> <div class="sticky-video-modal-header"> <a href="#" class="sticky-video-modal-resize sticky-video-modal-btn" onclick="toggleView()" > <img src="src/img/ic-maximize.svg" alt="maximize" class="maximize-icon"/> <img src="src/img/ic-minimize.svg" alt="minimize" class="minimize-icon"/> </a> <a href="#" class="sticky-video-modal-close sticky-video-modal-btn" onclick="closeStickyVideoModal()" > <img src="src/img/ic-close.svg" alt="close"/> </a> </div><div class="sticky-video-modal-body"> <div id="sticky-video-modal-video"></div></div></div>';
 
 // Add Default Values for video
 if (!localStorage.getItem("videoModalView"))
@@ -25,10 +43,6 @@ function toggleView() {
     document.body.classList.add("fullscreen-mode");
   }
 }
-
-// global variable for the player
-var player;
-var myVideoTimer;
 
 // this function gets called when API is ready to use
 function onYouTubePlayerAPIReady() {

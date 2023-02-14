@@ -39,10 +39,19 @@ Simply and functional example/s of use.
 Example:
 
 ```javascript
-<a href="#" title="Video 1" class="show-sticky-video-modal" data-video-id="v0Cf6nM77bU">Video 1</a>
-<a href="#" title="Video 2" class="show-sticky-video-modal" data-video-id="Q8L3ElJlpjk">Video 2</a>
+<a class="sticky-popup" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y">Video_1</a>
+<a class="my-sticky-class" href="https://www.youtube.com/embed/wWY_clozJlU">Video_2</a>
+<a class="" target="_blank" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y">Video_3</a>
 
-<script src="src/index.js"></script>
+<script src="dist/index.js"></script>
+
+<script>
+// Default -> "sticky-popup" CSS class is used
+var strickyMediaInstance = new StrickyMedia();
+
+// Custom -> "my-sticky-class" is used to trigger the popup
+var strickyMediaInstance = new StrickyMedia( {'cssClass':'my-sticky-class'} );
+</script>
 ```
 
 <br />
