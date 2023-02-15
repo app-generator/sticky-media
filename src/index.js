@@ -10,13 +10,6 @@ link.type = "text/css";
 link.href = "src/css/style.css";
 head.appendChild(link);
 
-// // Add HTML in Body // @TODO: HTML code should be moved to
-// const xhttpHTML = new XMLHttpRequest();
-// xhttpHTML.onload = function () {
-//   document.body.innerHTML += this.responseText;
-// };
-// xhttpHTML.open("GET", "src/html/sticky-popup.html");
-// xhttpHTML.send();
 document.body.innerHTML +=
   '<div class="sticky-video-modal"> <div class="sticky-video-modal-header"> <a href="#" class="sticky-video-modal-resize sticky-video-modal-btn" onclick="toggleView()" > <img src="src/img/ic-maximize.svg" alt="maximize" class="maximize-icon"/> <img src="src/img/ic-minimize.svg" alt="minimize" class="minimize-icon"/> </a> <a href="#" class="sticky-video-modal-close sticky-video-modal-btn" onclick="closeStickyVideoModal()" > <img src="src/img/ic-close.svg" alt="close"/> </a> </div><div class="sticky-video-modal-body"> <div id="sticky-video-modal-video"></div></div></div>';
 

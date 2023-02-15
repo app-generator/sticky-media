@@ -1,24 +1,36 @@
-# Sticky Media
+# [Sticky Media](https://github.com/app-generator/sticky-media)
 
-Simple Vanilla JS library for Sticky Media content (Youtube videos).
+Simple Vanilla JS library for `Sticky Media` content (YouTube videos) - actively supported by [AppSeed](https://appseed.us/).
 
 - NPM Page: [Sticky Media](https://www.npmjs.com/package/sticky-media)
-- **Support**: 24/7 LIVE Support via [Discord] (registered users)
+- Free [Support](https://appseed.us/support/) via Email & Discord
 
 ## Table of contents
 
-- [Technologies](#technologies)
-- [Setup](#setup)
+- [Environment](#environment)
+- [Manual Preview](#manual-preview)
 - [Quick use](#quick-use)
 - [License](#license)
 
 <br />
 
-## Technologies
+## Environment
 
 Project create with:
 
 - Node JS >= 14x
+
+<br />
+
+## Manual Preview 
+
+> Using **Python** 
+
+`$ python -m http.server 9999`
+
+> Using **PHP**
+
+`$ php -S localhost:9999`
 
 <br />
 
@@ -63,5 +75,4 @@ var strickyMediaInstance = new StrickyMedia( {'cssClass':'my-sticky-class'} );
 <br />
 
 ---
-
-Sticky Media (JS Interface) - Provided by [AppSeed](https://appseed.us)
+[Sticky Media](https://github.com/app-generator/sticky-media) - Simple Vanilla JS library provided by [AppSeed](https://appseed.us)
