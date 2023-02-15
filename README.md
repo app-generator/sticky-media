@@ -7,7 +7,7 @@ Simple Vanilla JS library for `Sticky Media` content (YouTube videos) - actively
 
 <br />
 
-![Sticky Media - Simple Vanilla JS library for media content.](https://user-images.githubusercontent.com/51070104/219113007-01382915-d605-4ba5-8417-88cf7dbc79c2.jpg)
+![Sticky Media - Simple Vanilla JS library for media content.](https://user-images.githubusercontent.com/51070104/219113563-1b00882d-1501-4ea4-b81c-f64ab99dfec2.jpg)
 
 <br />
 
