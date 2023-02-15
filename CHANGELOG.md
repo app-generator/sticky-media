@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.0.10] 2023-02-15
+### Changes
+
+- JS code rafactoring
+
+## [0.0.9] 2023-02-15
+### Changes
+
+- Commit CSS  
+
 ## [0.0.8] 2023-02-15
 ### Changes
 
