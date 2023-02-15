@@ -3,7 +3,7 @@
 Simple Vanilla JS library for `Sticky Media` content (YouTube videos) - actively supported by [AppSeed](https://appseed.us/).
 
 - NPM Page: [Sticky Media](https://www.npmjs.com/package/sticky-media)
-- Free [Support](https://appseed.us/support/) via Email & Discord
+- Free [Support](https://appseed.us/support/) via `Email` & `Discord`
 
 ## Table of contents
 
@@ -48,22 +48,45 @@ $ npm i sticky-media
 
 Simply and functional example/s of use.
 
-Example:
+> Step 1: Import the JS (local storage)
 
 ```javascript
-<a class="sticky-popup" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y">Video_1</a>
-<a class="my-sticky-class" href="https://www.youtube.com/embed/wWY_clozJlU">Video_2</a>
-<a class="" target="_blank" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y">Video_3</a>
-
 <script src="dist/index.js"></script>
+```
 
-<script>
+Or you can simply use CDN storage: 
+
+```javascript
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/app-generator/sticky-media@latest/dist/index.min.js"></script>
+```
+
+<br />
+
+> Step 2: Init the library 
+
+```javascript
 // Default -> "sticky-popup" CSS class is used
 var strickyMediaInstance = new StrickyMedia();
 
 // Custom -> "my-sticky-class" is used to trigger the popup
 var strickyMediaInstance = new StrickyMedia( {'cssClass':'my-sticky-class'} );
-</script>
+```
+
+<br />
+
+> Step 3: Use it in the code
+
+- `Video ID`: **GET parameter**
+
+```javascript
+<!--  -->
+<a class="sticky-popup" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y">Video_1</a>
+```
+
+- `Video ID`: **URI segment**
+
+```javascript
+<a class="sticky-popup" href="https://www.youtube.com/embed/wWY_clozJlU">Video_2</a>
 ```
 
 <br />
@@ -71,6 +94,13 @@ var strickyMediaInstance = new StrickyMedia( {'cssClass':'my-sticky-class'} );
 ## License
 
 @MIT License
+
+<br />
+
+## Resources 
+
+- More [Tools for developers](https://appseed.us/developer-tools/) - `all free`
+- Free [Support](https://appseed.us/support/) via `Email` & `Discord`
 
 <br />
 
