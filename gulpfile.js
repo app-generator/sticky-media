@@ -25,7 +25,7 @@ gulp.task("watch", function () {
 });
 
 gulp.task("open", function () {
-  gulp.src("./src/html/sticky-popup.html").pipe(open());
+  gulp.src("./index.html").pipe(open());
 });
 
 gulp.task("default", gulp.parallel("open", "watch"));
