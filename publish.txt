@@ -1,3 +1,15 @@
-npm version 0.0.1
-npm adduser
-npm publish
+npm adduser       --> only once
+
+git commit              --> all local changes 
+npm version 0.0.1       --> tag changes 
+git push origin --tags  --> push tag 
+
+CREATE delivery         --> https://github.com/app-generator/sticky-media 
+
+npm publish             --> Publish on NPM 
+
+Check Delivery
+https://cdn.jsdelivr.net/gh/app-generator/sticky-media@ !!!VERSION_HERE!!! /dist/index.min.js
+
+Sample:
+https://cdn.jsdelivr.net/gh/app-generator/sticky-media@0.0.6/dist/index.min.js

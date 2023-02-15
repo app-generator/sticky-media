@@ -1,6 +1,6 @@
 /*!
 =========================================================
-* Stycky Media - v0.0.5
+* Stycky Media - v0.0.8
 =========================================================
 * Product Page: https://github.com/app-generator/sticky-media
 * Copyright AppSeed (https://appseed.us)

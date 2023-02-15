@@ -1,8 +1,14 @@
 # Change Log
 
+## [0.0.8] 2023-02-15
+### Changes
+
+- Bump Version
+
 ## [0.0.7] 2023-02-15
 ### Changes
 
+- Update version
 
 ## [0.0.6] 2023-02-15
 ### Changes
