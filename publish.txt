@@ -12,4 +12,5 @@ Check Delivery
 https://cdn.jsdelivr.net/gh/app-generator/sticky-media@ !!!VERSION_HERE!!! /dist/index.min.js
 
 Sample:
+https://cdn.jsdelivr.net/gh/app-generator/sticky-media/  <-- Check allversions
 https://cdn.jsdelivr.net/gh/app-generator/sticky-media@0.0.6/dist/index.min.js
