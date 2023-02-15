@@ -2,7 +2,7 @@
 
 Simple Vanilla JS library for `Sticky Media` content (YouTube videos) - actively supported by [AppSeed](https://appseed.us/).
 
-- NPM Page: [Sticky Media](https://www.npmjs.com/package/sticky-media)
+- [Sticky Media](https://sticky-media.appseed-srv1.com/) - `Live DEMO`
 - Free [Support](https://appseed.us/support/) via `Email` & `Discord`
 
 <br />
