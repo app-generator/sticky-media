@@ -5,6 +5,12 @@ Simple Vanilla JS library for `Sticky Media` content (YouTube videos) - actively
 - NPM Page: [Sticky Media](https://www.npmjs.com/package/sticky-media)
 - Free [Support](https://appseed.us/support/) via `Email` & `Discord`
 
+<br />
+
+![Sticky Media - Simple Vanilla JS library for media content.](https://user-images.githubusercontent.com/51070104/219112822-feec1d21-1d3e-4c99-856c-99ccd4d8014c.png)
+
+<br />
+
 ## Table of contents
 
 - [Environment](#environment)
