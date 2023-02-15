@@ -54,13 +54,13 @@ $ npm i sticky-media
 
 Simply and functional example/s of use.
 
-> Step 1: Import the JS (local storage)
+> **Step 1**: `Import the JS` (local storage)
 
 ```javascript
 <script src="dist/index.js"></script>
 ```
 
-Or you can simply use CDN storage: 
+Or you can simply use `CDN storage`: 
 
 ```javascript
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/app-generator/sticky-media@latest/dist/index.min.js"></script>
@@ -68,7 +68,7 @@ Or you can simply use CDN storage:
 
 <br />
 
-> Step 2: Init the library 
+> **Step 2**: `Init` the library 
 
 ```javascript
 // Default -> "sticky-popup" CSS class is used
@@ -80,7 +80,7 @@ var strickyMediaInstance = new StrickyMedia( {'cssClass':'my-sticky-class'} );
 
 <br />
 
-> Step 3: Use it in the code
+> **Step 3**: `Use it` in the code
 
 - `Video ID`: **GET parameter**
 
