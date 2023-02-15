@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.0.6] 2023-02-15
+### Changes
+
+- Added Copyright  
+
 ## [0.0.5] 2023-02-15
 ### Changes
 

@@ -1,3 +1,12 @@
+/*!
+=========================================================
+* Stycky Media - v0.0.5
+=========================================================
+* Product Page: https://github.com/app-generator/sticky-media
+* Copyright AppSeed (https://appseed.us)
+=========================================================
+*/
+
 // global variable for the player
 var player;
 var myVideoTimer;
