@@ -4,24 +4,15 @@
  * License MIT
  */
 var gulp = require("gulp");
-var minifyCSS = require("gulp-clean-css");
 var minify = require("gulp-minify");
 var open = require("gulp-open");
-
-gulp.task("minify-css", function () {
-  return gulp
-    .src("./src/css/*.css")
-    .pipe(minifyCSS())
-    .pipe(gulp.dest("./dist/css/"));
-});
 
 gulp.task("prod", function () {
   return gulp.src("./src/*.js").pipe(minify()).pipe(gulp.dest("./dist"));
 });
 
 gulp.task("watch", function () {
-  gulp.watch("./src/css/*.css", gulp.series("minify-css"));
-  gulp.watch("./src/index.js", gulp.series("minify-js"));
+  gulp.watch("./src/index.js", gulp.series("prod"));
 });
 
 gulp.task("open", function () {
