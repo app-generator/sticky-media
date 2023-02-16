@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.0.12] 2023-02-16
+### Changes
+
+- Fix CSS (mobile view)
+
 ## [0.0.11] 2023-02-15
 ### Changes
 
