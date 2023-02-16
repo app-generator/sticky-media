@@ -85,7 +85,6 @@ var strickyMediaInstance = new StrickyMedia( {'cssClass':'my-sticky-class'} );
 - `Video ID`: **GET parameter**
 
 ```javascript
-<!--  -->
 <a class="sticky-popup" href="https://www.youtube.com/watch?v=G1OM2L7XK5Y">Video_1</a>
 ```
 
