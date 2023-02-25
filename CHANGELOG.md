@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.0.13] 2023-02-25
+### Changes
+
+- Correct Typo: 
+  - `StrickyMedia()` -> `StickyMedia()`
+
 ## [0.0.12] 2023-02-16
 ### Changes
 

@@ -72,10 +72,10 @@ Or you can simply use `CDN storage`:
 
 ```javascript
 // Default -> "sticky-popup" CSS class is used
-var strickyMediaInstance = new StrickyMedia();
+var stickyMediaInstance = new StickyMedia();
 
 // Custom -> "my-sticky-class" is used to trigger the popup
-var strickyMediaInstance = new StrickyMedia( {'cssClass':'my-sticky-class'} );
+var stickyMediaInstance = new StickyMedia( {'cssClass':'my-sticky-class'} );
 ```
 
 <br />

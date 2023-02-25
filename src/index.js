@@ -1,6 +1,6 @@
 /*!
 =========================================================
-* Stycky Media - v0.0.12
+* Stycky Media - v0.0.13
 =========================================================
 * Product Page: https://github.com/app-generator/sticky-media
 * Copyright AppSeed (https://appseed.us)
@@ -93,7 +93,7 @@ function closeStickyVideoModal() {
 
 // Button click event
 // constructor function
-function StrickyMedia(e) {
+function StickyMedia(e) {
   var cssClass = "sticky-popup";
   if (e != undefined) cssClass = e.cssClass;
   var elements = document.getElementsByClassName(cssClass);

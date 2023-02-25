@@ -93,7 +93,7 @@ function closeStickyVideoModal() {
 
 // Button click event
 // constructor function
-function StrickyMedia(e) {
+function StickyMedia(e) {
   var cssClass = "sticky-popup";
   if (e != undefined) cssClass = e.cssClass;
   var elements = document.getElementsByClassName(cssClass);
