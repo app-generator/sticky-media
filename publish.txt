@@ -1,7 +1,8 @@
 npm adduser       --> only once
 
-git commit              --> all local changes 
-npm version 0.0.1       --> tag changes 
+Gulp prod               --> Build production version  
+Git commit              --> all local changes 
+npm version 0.0.15      --> tag changes 
 git push origin --tags  --> push tag 
 
 CREATE delivery         --> https://github.com/app-generator/sticky-media 
