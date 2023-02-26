@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -37,13 +36,6 @@
         padding: 60px 15px 0;
       }
     </style>
-
-    <script
-      defer
-      id="stickyVideoScript"
-      src="//cdn.jsdelivr.net/gh/app-generator/sticky-media@0.0.17/dist/index.min.js"
-      class="sticky-popup"
-    ></script>
   </head>
   <body>
     <!-- Fixed navbar -->
@@ -76,62 +68,84 @@
           </form>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
     <main>
+      <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">
+          <a href="https://www.npmjs.com/package/sticky-media" target="_blank">
+            StickyMedia.JS
+          </a>
+        </h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            Minimal library that makes YouTube Videos sticky.
+          </p>
 
-        <div class="px-4 py-5 my-5 text-center">
-            <h1 class="display-5 fw-bold">
-              <a href="https://www.npmjs.com/package/sticky-media" target="_blank">
-                StickyMedia.JS
-              </a>              
-            </h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">
-                    Minimal library that makes YouTube Videos sticky.   
-                </p>
+          <br />
 
-                <br />
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a
+              class="sticky-popup"
+              href="https://www.youtube.com/watch?v=EtMCK5AmdQI"
+              >Video</a
+            >
 
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    
-                    <a class="sticky-popup" href="https://www.youtube.com/watch?v=EtMCK5AmdQI">Video</a>
+            &bullet;
 
-                    &bullet;
+            <a class="sticky-popup" href="https://youtube.com/embed/9HqyJ_80JwI"
+              >Video</a
+            >
 
-                    <a class="sticky-popup" href="https://youtube.com/embed/9HqyJ_80JwI">Video</a>
+            &bullet;
 
-                    &bullet;
+            <a
+              class="sticky-popup"
+              target="_blank"
+              href="https://youtu.be/IM-PJrlgBe8"
+              >Video</a
+            >
 
-                    <a class="sticky-popup" target="_blank" href="https://youtu.be/IM-PJrlgBe8">Video</a>
+            &bullet;
 
-                    &bullet;
-
-                    <a class="my-sticky-class" target="_blank" href="https://m.youtube.com/v/dQw4w9WgXcQ">Video</a>
-                    
-                </div>
-            </div>
+            <a
+              class="my-sticky-class"
+              target="_blank"
+              href="https://m.youtube.com/v/dQw4w9WgXcQ"
+              >Video</a
+            >
+          </div>
         </div>
+      </div>
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">
-  <div class="container text-center">
-    <span class="text-muted">
-        Provided by <a target="_blank" href="https://appseed.us">AppSeed</a>
-    </span>
-  </div>
-</footer>
+      <div class="container text-center">
+        <span class="text-muted">
+          Provided by <a target="_blank" href="https://appseed.us">AppSeed</a>
+        </span>
+      </div>
+    </footer>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-      
+
     <!-- CDN Version -->
     <!--
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/app-generator/sticky-media@0.0.15/dist/index.min.js"></script>
     -->
 
     <!-- Local Version -->
-    <!-- <script type="text/javascript" src="./src/index.js"></script> -->
+    <script type="text/javascript" src="./src/index.js"></script>
+
+    <script>
+      // Default -> "sticky-popup" CSS class is used
+      var stickyMediaInstance = new StickyMedia();
+
+      // Custom -> "my-sticky-class" is used to trigger the popup
+      var stickyMediaInstance = new StickyMedia({
+        cssClass: "my-sticky-class",
+      });
+    </script>
   </body>
 </html>
