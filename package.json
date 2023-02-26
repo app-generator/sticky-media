@@ -1,6 +1,6 @@
 {
     "name": "sticky-media",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "description": "Simple Vanilla JS library for Sticky Media content",
     "main": "./dist/index.js",
     "scripts": {
