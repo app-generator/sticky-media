@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.0.17] 2023-02-26
+### Changes
+
+- JS Library, new pattern
+
 ## [0.0.16] 2023-02-26
 ### Changes
 

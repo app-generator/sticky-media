@@ -1,6 +1,6 @@
 /*!
 =========================================================
-* Stycky Media - v0.0.16
+* Stycky Media - v0.0.17
 =========================================================
 * Product Page: https://github.com/app-generator/sticky-media
 * Copyright AppSeed (https://appseed.us)
@@ -94,7 +94,8 @@ function closeStickyVideoModal() {
 // Button click event
 // constructor function
 function StickyMedia(e) {
-  var cssClass = "sticky-popup";
+  var scripts = document.getElementById("stickyVideoScript");
+  var cssClass = scripts.className;
   if (e != undefined) cssClass = e.cssClass;
   var elements = document.getElementsByClassName(cssClass);
 
@@ -119,6 +120,7 @@ function StickyMedia(e) {
 
   for (var i = 0; i < elements.length; i++) {
     var VideoId = elements[i].getAttribute("href");
+    if (!VideoId) continue;
     var dataVideoId;
     if (VideoId.indexOf("embed/") > -1) {
       dataVideoId = VideoId.split("embed/")[1];
@@ -127,7 +129,7 @@ function StickyMedia(e) {
     } else if (VideoId.indexOf("youtu.be/") > -1) {
       dataVideoId = VideoId.split("youtu.be/")[1];
     } else if (VideoId.indexOf("youtube.com/v/") > -1) {
-      dataVideoId = VideoId.split("youtube.com/v/")[1];      
+      dataVideoId = VideoId.split("youtube.com/v/")[1];
     } else {
       // Unknown format
       window.open(VideoId);
@@ -144,3 +146,8 @@ var tag = document.createElement("script");
 tag.src = "//www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// Instantiate after page load
+window.onload = function () {
+  StickyMedia();
+};
