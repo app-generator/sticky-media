@@ -1,6 +1,6 @@
 /*!
 =========================================================
-* Stycky Media - v0.0.15
+* Stycky Media - v0.0.16
 =========================================================
 * Product Page: https://github.com/app-generator/sticky-media
 * Copyright AppSeed (https://appseed.us)
@@ -120,10 +120,18 @@ function StickyMedia(e) {
   for (var i = 0; i < elements.length; i++) {
     var VideoId = elements[i].getAttribute("href");
     var dataVideoId;
-    if (VideoId.indexOf("embed") > -1) {
+    if (VideoId.indexOf("embed/") > -1) {
       dataVideoId = VideoId.split("embed/")[1];
     } else if (VideoId.indexOf("watch?v=") > -1) {
       dataVideoId = VideoId.split("watch?v=")[1];
+    } else if (VideoId.indexOf("youtu.be/") > -1) {
+      dataVideoId = VideoId.split("youtu.be/")[1];
+    } else if (VideoId.indexOf("youtube.com/v/") > -1) {
+      dataVideoId = VideoId.split("youtube.com/v/")[1];      
+    } else {
+      // Unknown format
+      window.open(VideoId);
+      return;
     }
 
     elements[i].setAttribute("data-video-id", dataVideoId);

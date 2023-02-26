@@ -4,6 +4,12 @@ Simple Vanilla JS library for `Sticky Media` content (YouTube videos) - actively
 
 - [Sticky Media](https://sticky-media.appseed-srv1.com/) - `Live DEMO`
 - Free [Support](https://appseed.us/support/) via `Email` & `Discord`
+- Supported YouTube Links(just a few from [this](https://gist.github.com/rodrigoborgesdeoliveira/987683cfbfcc8d800192da1e73adc486) list)
+  - `https://www.youtube.com/watch?v=EtMCK5AmdQI`
+  - `https://youtube.com/embed/9HqyJ_80JwI`
+  - `https://youtu.be/IM-PJrlgBe8`
+  - `https://m.youtube.com/v/dQw4w9WgXcQ`
+- If the VideoID cannot be extracted the URL is handled via `window.open(VideoId)`
 
 <br />
 
