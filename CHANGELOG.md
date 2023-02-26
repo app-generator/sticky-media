@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.0.14] 2023-02-2526
+### Changes
+
+- Disable Saving the PlayingTime 
+
 ## [0.0.13] 2023-02-25
 ### Changes
 

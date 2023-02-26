@@ -72,12 +72,12 @@ function onPlayerReady(event) {
   ) {
     player.loadVideoById({
       videoId: localStorage.getItem("videoID"),
-      startSeconds: localStorage.getItem("videoModalTime"),
+      startSeconds: 0, // localStorage.getItem("videoModalTime"),
     });
     clearInterval(myVideoTimer);
-    myVideoTimer = setInterval(function () {
-      localStorage.setItem("videoModalTime", player.getCurrentTime());
-    }, 1000);
+    //myVideoTimer = setInterval(function () {
+    //  localStorage.setItem("videoModalTime", player.getCurrentTime());
+    //}, 1000);
     document.body.classList.add("show-sticky-video-modal");
     player.playVideo();
   }
@@ -107,14 +107,14 @@ function StickyMedia(e) {
       player.loadVideoById({
         videoId: localStorage.getItem("videoID"),
       });
-      localStorage.setItem("videoModalTime", 0);
+      //localStorage.setItem("videoModalTime", 0);
     }
     document.body.classList.add("show-sticky-video-modal");
     player.playVideo();
     clearInterval(myVideoTimer);
-    myVideoTimer = setInterval(function () {
-      localStorage.setItem("videoModalTime", player.getCurrentTime());
-    }, 1000);
+    //myVideoTimer = setInterval(function () {
+    //  localStorage.setItem("videoModalTime", player.getCurrentTime());
+    //}, 1000);
   };
 
   for (var i = 0; i < elements.length; i++) {
