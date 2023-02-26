@@ -36,6 +36,13 @@
         padding: 60px 15px 0;
       }
     </style>
+
+    <script
+      defer
+      id="stickyVideoScript"
+      src="//cdn.jsdelivr.net/gh/app-generator/sticky-media@0.0.17/dist/index.min.js"
+      class="sticky-popup"
+    ></script>
   </head>
   <body>
     <!-- Fixed navbar -->
@@ -136,16 +143,12 @@
     -->
 
     <!-- Local Version -->
-    <script type="text/javascript" src="./src/index.js"></script>
-
-    <script>
-      // Default -> "sticky-popup" CSS class is used
-      var stickyMediaInstance = new StickyMedia();
-
-      // Custom -> "my-sticky-class" is used to trigger the popup
-      var stickyMediaInstance = new StickyMedia({
-        cssClass: "my-sticky-class",
-      });
-    </script>
+    <!-- <script
+      defer
+      type="text/javascript"
+      id="stickyVideoScript"
+      src="./src/index.js"
+      class="sticky-popup"
+    ></script> -->
   </body>
 </html>
