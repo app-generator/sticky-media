@@ -1,56 +1,80 @@
 
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.88.1">
-<title>
-  Sticky Media - Simple JS Library | AppSeed
-</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.88.1" />
+    <title>Sticky Media - Simple JS Library | AppSeed</title>
 
-<!-- CSS only -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    />
 
-<style>
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
-}
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
 
-main>.container {
-    padding: 60px 15px 0;
-}  
-</style>
-</head>
-<body>
+      main > .container {
+        padding: 60px 15px 0;
+      }
+    </style>
 
-      <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a target="_blank" class="navbar-brand" href="https://github.com/app-generator/sticky-media">
-        Sources
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        </ul>
-        <form action="https://appseed.us" class="d-flex">
-          <button class="btn btn-outline-success" type="submit">AppSeed</button>
-        </form>
+    <script
+      defer
+      id="stickyVideoScript"
+      src="//cdn.jsdelivr.net/gh/app-generator/sticky-media@0.0.17/dist/index.min.js"
+      class="sticky-popup"
+    ></script>
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a
+          target="_blank"
+          class="navbar-brand"
+          href="https://github.com/app-generator/sticky-media"
+        >
+          Sources
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
+          <form action="https://appseed.us" class="d-flex">
+            <button class="btn btn-outline-success" type="submit">
+              AppSeed
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </nav>
@@ -109,15 +133,6 @@ main>.container {
     -->
 
     <!-- Local Version -->
-    <script type="text/javascript" src="./src/index.js"></script>
-
-    <script>
-      // Default -> "sticky-popup" CSS class is used
-      var stickyMediaInstance = new StickyMedia();
-
-      // Custom -> "my-sticky-class" is used to trigger the popup
-      var stickyMediaInstance = new StickyMedia( {'cssClass':'my-sticky-class'} );
-    </script>
-
-</body>
+    <!-- <script type="text/javascript" src="./src/index.js"></script> -->
+  </body>
 </html>
