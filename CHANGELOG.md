@@ -3,7 +3,7 @@
 ## [0.0.19] 2023-02-28
 ### Changes
 
-- handle th case when the 
+- handle the case when the library is initialized twice
 
 ## [0.0.18] 2023-02-28
 ### Changes
