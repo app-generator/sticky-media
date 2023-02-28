@@ -1,6 +1,6 @@
 /*!
 =========================================================
-* Stycky Media - v0.0.17
+* Stycky Media - v0.0.18
 =========================================================
 * Product Page: https://github.com/app-generator/sticky-media
 * Copyright AppSeed (https://appseed.us)
@@ -23,7 +23,7 @@ document.getElementsByTagName("head")[0].appendChild(styleSheet);
 
 // Add Default Values for video
 if (!localStorage.getItem("videoModalView"))
-  localStorage.setItem("videoModalView", "fullscreen-mode");
+  localStorage.setItem("videoModalView", "smallscreen-mode");
 
 if (!localStorage.getItem("videoModalFlag"))
   localStorage.setItem("videoModalFlag", "false");

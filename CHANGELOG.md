@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.0.18] 2023-02-28
+### Changes
+
+- Default mode is minimized
+
 ## [0.0.17] 2023-02-26
 ### Changes
 
