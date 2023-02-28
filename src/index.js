@@ -23,7 +23,7 @@ document.getElementsByTagName("head")[0].appendChild(styleSheet);
 
 // Add Default Values for video
 if (!localStorage.getItem("videoModalView"))
-  localStorage.setItem("videoModalView", "fullscreen-mode");
+  localStorage.setItem("videoModalView", "smallscreen-mode");
 
 if (!localStorage.getItem("videoModalFlag"))
   localStorage.setItem("videoModalFlag", "false");
