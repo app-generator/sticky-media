@@ -1,6 +1,6 @@
 /*!
 =========================================================
-* Stycky Media - v0.0.19
+* Stycky Media - v0.0.21
 =========================================================
 * Product Page: https://github.com/app-generator/sticky-media
 * Copyright AppSeed (https://appseed.us)
@@ -127,10 +127,6 @@ function StickyMedia(e) {
     var e = this;
     event.preventDefault();
     localStorage.setItem("videoModalFlag", "true");
-
-    if ( !e.hasAttribute("data-video-id") )
-      e.setAttribute("data-video-id", dataVideoId);  
-
     if (localStorage.getItem("videoID") != e.getAttribute("data-video-id")) {
       localStorage.setItem("videoID", e.getAttribute("data-video-id"));
       player.loadVideoById({
