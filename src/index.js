@@ -101,7 +101,7 @@ function StickyMedia(e) {
   if (e != undefined) cssClass = e.cssClass;
   var elements = document.getElementsByClassName(cssClass);
 
-  var myFunction = function () {
+  var myFunction = function (event) {
     var e = this;
     event.preventDefault();
     localStorage.setItem("videoModalFlag", "true");
