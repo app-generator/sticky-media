@@ -101,25 +101,7 @@ function StickyMedia(e) {
   if (e != undefined) cssClass = e.cssClass;
   var elements = document.getElementsByClassName(cssClass);
 
-  var myFunction = function () {
-    var e = this;
-    event.preventDefault();
-    localStorage.setItem("videoModalFlag", "true");
-    if (localStorage.getItem("videoID") != e.getAttribute("data-video-id")) {
-      localStorage.setItem("videoID", e.getAttribute("data-video-id"));
-      player.loadVideoById({
-        videoId: localStorage.getItem("videoID"),
-      });
-      //localStorage.setItem("videoModalTime", 0);
-    }
-    document.body.classList.add("show-sticky-video-modal");
-    player.playVideo();
-    clearInterval(myVideoTimer);
-    //myVideoTimer = setInterval(function () {
-    //  localStorage.setItem("videoModalTime", player.getCurrentTime());
-    //}, 1000);
-  };
-
+  // 1st Iteration => Add `data-video-id`
   for (var i = 0; i < elements.length; i++) {
     var VideoId = elements[i].getAttribute("href");
     if (!VideoId) continue;
@@ -139,6 +121,50 @@ function StickyMedia(e) {
     }
 
     elements[i].setAttribute("data-video-id", dataVideoId);
+  }
+
+  var myFunction = function () {
+    var e = this;
+    event.preventDefault();
+    localStorage.setItem("videoModalFlag", "true");
+
+    if ( !e.hasAttribute("data-video-id") )
+      e.setAttribute("data-video-id", dataVideoId);  
+
+    if (localStorage.getItem("videoID") != e.getAttribute("data-video-id")) {
+      localStorage.setItem("videoID", e.getAttribute("data-video-id"));
+      player.loadVideoById({
+        videoId: localStorage.getItem("videoID"),
+      });
+      //localStorage.setItem("videoModalTime", 0);
+    }
+    document.body.classList.add("show-sticky-video-modal");
+    player.playVideo();
+    clearInterval(myVideoTimer);
+    //myVideoTimer = setInterval(function () {
+    //  localStorage.setItem("videoModalTime", player.getCurrentTime());
+    //}, 1000);
+  };
+
+  // 2st Iteration => Add Listener
+  for (var i = 0; i < elements.length; i++) {
+    var VideoId = elements[i].getAttribute("href");
+    if (!VideoId) continue;
+    var dataVideoId;
+    if (VideoId.indexOf("embed/") > -1) {
+      dataVideoId = VideoId.split("embed/")[1];
+    } else if (VideoId.indexOf("watch?v=") > -1) {
+      dataVideoId = VideoId.split("watch?v=")[1];
+    } else if (VideoId.indexOf("youtu.be/") > -1) {
+      dataVideoId = VideoId.split("youtu.be/")[1];
+    } else if (VideoId.indexOf("youtube.com/v/") > -1) {
+      dataVideoId = VideoId.split("youtube.com/v/")[1];
+    } else {
+      // Unknown format
+      window.open(VideoId);
+      return;
+    }
+
     elements[i].addEventListener("click", myFunction, false);
   }
 }
